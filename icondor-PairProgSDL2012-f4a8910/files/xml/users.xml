@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- This is a comment -->
+<users>
+    <user id="1">
+        <name>Radu</name>
+        <role>QA</role>
+        <state>SENIOR</state>
+        <project_id>1</project_id>
+    </user>
+    <user id="2">
+        <name>Ovidiu</name>
+        <role>DEV</role>
+        <state>SENIOR</state>
+        <project_id>1</project_id>
+    </user>
+    <user id="3">
+        <name>t01</name>
+        <role>QA</role>
+        <state>MID</state>
+        <project_id>2</project_id>
+    </user>
+    <user id="7">
+        <name>t01asdas</name>
+        <role>DEV</role>
+        <state>JUNIOR</state>
+        <project_id>2</project_id>
+    </user>
+    <user id="4">
+        <name>t02</name>
+        <role>QA</role>
+        <state>SENIOR</state>
+        <project_id>3</project_id>
+    </user>
+    <user id="6">
+        <name>asdaosdj</name>
+        <role>DEV</role>
+        <state>MID</state>
+        <project_id>3</project_id>
+    </user>
+    <user id="5">
+        <name>Ovidiu2</name>
+        <role>DEV</role>
+        <state>JUNIOR</state>
+        <project_id>1</project_id>
+    </user>
+
+</users>

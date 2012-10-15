@@ -1,0 +1,12 @@
+Ion qa mid
+Ghita dev sr
+Ana qa jr
+Maria dev jr
+Marius qa sr
+Ionel dev sr
+Radu qa jr
+Asd dev mid
+123 dev mid
+234 qa mid
+566 qa sr
+999 dev sr

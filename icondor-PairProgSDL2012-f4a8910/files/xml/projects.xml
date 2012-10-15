@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<projects>
+    <project id="1">
+        <description>BigBird</description>
+    </project>
+    <project id="2">
+        <description>Iceberg</description>
+    </project>
+    <project id="3">
+        <description>BeGlobal</description>
+    </project>
+</projects>
