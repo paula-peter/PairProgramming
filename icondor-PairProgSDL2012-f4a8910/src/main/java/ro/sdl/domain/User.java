@@ -1,12 +1,29 @@
 package ro.sdl.domain;
 
+import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.Entity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.sql.DataSource;
+
+
+@Entity
+@Table(name="user")
 public class User {
+
 
     private Integer id;
     private String name;
     private Role role;     // dev, qa
     private State state;  // jr, mid , senior
+    @OneToMany(fetch= FetchType.EAGER)
     private Project project;
+
 
     public User(Integer id, String name, Role role, State state) {
         this.id = id;

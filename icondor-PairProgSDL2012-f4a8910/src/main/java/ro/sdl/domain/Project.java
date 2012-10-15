@@ -1,10 +1,18 @@
 package ro.sdl.domain;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Project {
+
+    @Autowired
+    @Qualifier("coreDataSource")
+    private DataSource dataSource;
 
     public Project() {
     }

@@ -1,5 +1,6 @@
 package ro.sdl;
 
+import ro.sdl.application.data.AppDataLoader;
 import ro.sdl.service.PdfTableGeneratorService;
 
 /**
@@ -8,12 +9,13 @@ import ro.sdl.service.PdfTableGeneratorService;
 public class App {
     public static void main(String[] args) {
 
-        PdfTableGeneratorService pdfTableGeneratorService = new PdfTableGeneratorService();
-        pdfTableGeneratorService.generatePdfFile();
-        pdfTableGeneratorService.generatePdfFileWithProjectComposition();
-        pdfTableGeneratorService.generatePdfFileWithProjectDistribution();
-        pdfTableGeneratorService.generatePdfFileWithProjectStateDistribution();
-        pdfTableGeneratorService.generatePdfFileWithStructureDistribution();
-        pdfTableGeneratorService.generatePdfFileWithRoleRatio();
+        AppDataLoader.loadDataFromMemory();
+//        PdfTableGeneratorService pdfTableGeneratorService = new PdfTableGeneratorService();
+//        pdfTableGeneratorService.generatePdfFile();
+//        pdfTableGeneratorService.generatePdfFileWithProjectComposition();
+//        pdfTableGeneratorService.generatePdfFileWithProjectDistribution();
+//        pdfTableGeneratorService.generatePdfFileWithProjectStateDistribution();
+//        pdfTableGeneratorService.generatePdfFileWithStructureDistribution();
+//        pdfTableGeneratorService.generatePdfFileWithRoleRatio();
     }
 }

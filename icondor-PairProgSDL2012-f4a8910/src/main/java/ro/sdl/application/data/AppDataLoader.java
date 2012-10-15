@@ -1,6 +1,8 @@
 package ro.sdl.application.data;
 
 
+import dao.UserDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import ro.sdl.domain.Project;
 import ro.sdl.domain.Role;
 import ro.sdl.domain.State;
@@ -26,26 +28,30 @@ import java.util.List;
 
 public class AppDataLoader {
 
+    @Autowired
+    public static UserDao userDao;
+
     private AppDataLoader() {
     }
 
     public static List<User> users = new ArrayList<User>();
     public static List<Project> projects = new ArrayList<Project>();
 
-    static {
-        loadDataFromXML();
-    }
+//    static {
+//        loadDataFromXML();
 
-    private boolean loadDataFromMemory() {
+//    }
+
+    public static boolean loadDataFromMemory() {
         boolean ok = true;
-        User user1 = new User(1, "Ion", Role.QA, State.MID);
-        User user2 = new User(2, "Ana", Role.DEV, State.JUNIOR);
-        User user3 = new User(3, "Radu", Role.DEV, State.SENIOR);
-        User user4 = new User(4, "Gabi", Role.DEV, State.SENIOR);
-        User user5 = new User(5, "Paula", Role.QA, State.SENIOR);
-        User user6 = new User(6, "Alteia", Role.QA, State.MID);
         Project project1 = new Project(1, "BigBird");
         Project project2 = new Project(2, "BeGlobal");
+        User user1 = new User(1, "Ion", Role.QA, State.MID, project1);
+        User user2 = new User(2, "Ana", Role.DEV, State.JUNIOR, project1);
+        User user3 = new User(3, "Radu", Role.DEV, State.SENIOR, project1);
+        User user4 = new User(4, "Gabi", Role.DEV, State.SENIOR, project2);
+        User user5 = new User(5, "Paula", Role.QA, State.SENIOR, project2);
+        User user6 = new User(6, "Alteia", Role.QA, State.MID, project2);
 
         List<User> project1List = new ArrayList<User>();
         project1List.add(user1);
@@ -57,14 +63,17 @@ public class AppDataLoader {
         project2List.add(user6);
         project1.setUsers(project1List);
         project2.setUsers(project2List);
-        users.add(user1);
-        users.add(user2);
-        users.add(user3);
-        users.add(user4);
-        users.add(user5);
-        users.add(user6);
-        projects.add(project1);
-        projects.add(project2);
+
+        userDao.save(user1);
+
+//        users.add(user1);
+//        users.add(user2);
+//        users.add(user3);
+//        users.add(user4);
+//        users.add(user5);
+//        users.add(user6);
+//        projects.add(project1);
+//        projects.add(project2);
         return ok;
     }
 
